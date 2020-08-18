@@ -1,5 +1,14 @@
 Description: Simple Database result set test
 
+Scenario: Authorization
+When I log in as a user'$user' with <email> and <password>
+Select email, password
+FROM table
+|id|user         |email                    |password|
+|1 |AlenaSamusik |elena_samusik@mail.ru    |12345678|
+
+
+
 Scenario: Verify database result set
 When I execute SQL query `
 SELECT id, name

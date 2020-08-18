@@ -1,12 +1,5 @@
-Description: Simple visual tests;
+Scenario: Authorization
+Given I am on the main application page
+When I log in as a user '$user' with <email> and <password>
+Then I sign in to the URL 'https://www.imdb.com/'
 
-Scenario: Open google search main page
-Given I am on a page with the URL 'https://www.example.com/'
-
-Scenario: Visual test of a page
-When I compare against baseline with `page`
-
-Scenario: Visual test of context element
-Given I am on a page with the URL 'https://github.com/vividus-framework'
-When I change context to an element by By.xpath(//img[@itemprop])
-When I compare against baseline with `vividus-logo`
